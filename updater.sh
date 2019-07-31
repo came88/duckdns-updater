@@ -76,11 +76,11 @@ do
     if [ -z "$DEVICE_IP" ] || [ "$DEVICE_IP" != "$DNS_IP" ]
     then
         log_info "Updating IP..."
-        RESULT=$(curl -s -q "https://www.duckdns.org/update?domains=$DOMAIN&token=$TOKEN&ip=$DEVICE_IP" )
+        RESULT=$(curl -s -q -f "https://www.duckdns.org/update?domains=$DOMAIN&token=$TOKEN&ip=$DEVICE_IP" )
         STATUS=$?
         log_debug "Curl exit code: $STATUS"
         log_debug "Curl output: $RESULT"
-        if [ $STATUS -eq 0 ] && [ "$RESULT" -eq "ok" ]
+        if [ $STATUS -eq 0 ]
         then
             log_info "Updated!"
             do_sleep $TIME_UPDATE
