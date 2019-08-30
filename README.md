@@ -1,5 +1,11 @@
 # DuckDNS Updater
 
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/came88/duckdns-updater)
+![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/came88/duckdns-updater)
+![MicroBadger Layers](https://img.shields.io/microbadger/layers/came88/duckdns-updater)
+![MicroBadger Size](https://img.shields.io/microbadger/image-size/came88/duckdns-updater)
+![Docker Pulls](https://img.shields.io/docker/pulls/came88/duckdns-updater)
+
 DuckDNS Updater is a lightweight image that check your public IP and update your [DuckDNS](https://www.duckdns.org) Dynamic DNS.
 
 By default, DuckDNS Updater will obtain your public IP every 30 seconds using a DNS query to opendns, akamay or google, updating your DDNS only if it is different from your domain ip on DuckDNS.
