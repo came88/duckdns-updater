@@ -1,5 +1,13 @@
 #!/bin/sh
 
+if [ -z "$TIME_CHECK" ]
+then
+    TIME_CHECK=30
+fi
+if [ -z "$TIME_UPDATE" ]
+then
+    TIME_UPDATE=600
+fi
 if [ -z "$DEBUG" ] || [ "$DEBUG" -eq "0" ]
 then
     log_debug() {
