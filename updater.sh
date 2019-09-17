@@ -88,7 +88,7 @@ do
         STATUS=$?
         log_debug "Curl exit code: $STATUS"
         log_debug "Curl output: $RESULT"
-        if [ $STATUS -eq 0 ]
+        if [ $STATUS -eq 0 ] && [ "$RESULT" = "OK" ]
         then
             log_info "Updated!"
             do_sleep $TIME_UPDATE
